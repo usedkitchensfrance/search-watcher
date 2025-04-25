@@ -1,5 +1,6 @@
-print("🚀 main.py has started running.")
 # main.py
+print("🚀 main.py has started running.")
+
 import time
 import json
 import threading
