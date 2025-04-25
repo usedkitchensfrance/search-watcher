@@ -14,6 +14,7 @@ print("📂 Loading searches...")
 try:
     with open("searches.json") as f:
         search_queries = json.load(f)
+        print("✅ Loaded searches:", search_queries)
 except Exception as e:
     print("❌ Failed to load searches.json:", e)
     search_queries = {}
@@ -49,19 +50,6 @@ def run_search(platform, query):
         print(f"📬 Found {len(new_results)} new results for {query['term']} on {platform}. Sending email...")
         send_email(platform, query['term'], new_results)
 
-def send_test_email():
-    print("📧 Sending startup test email...")
-    test_items = [
-        {
-            "id": "test123",
-            "title": "🔥 TEST ITEM: Toaster Deluxe",
-            "price": "£20",
-            "url": "https://example.com/item/test123",
-            "location": "London"
-        }
-    ]
-    send_email("test_platform", "test search", test_items)
-
 def search_loop():
     print("🔁 Starting main search loop (every 50 seconds)...")
     while True:
@@ -77,6 +65,4 @@ def search_loop():
 if __name__ == "__main__":
     print("✅ Search Watcher started.")
     print("Using Gmail from:", os.environ.get("EMAIL_FROM", "<not set>"))
-
-    send_test_email()  # <-- THIS sends test email on every startup
     search_loop()
