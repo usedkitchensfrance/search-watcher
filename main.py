@@ -1,3 +1,4 @@
+print("🚀 main.py has started running.")
 # main.py
 import time
 import json
