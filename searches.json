@@ -1,0 +1,5 @@
+{
+  "ebay": [{"term": "ps5"}],
+  "gumtree": [{"term": "iphone"}],
+  "leboncoin": [{"term": "velo"}]
+}
