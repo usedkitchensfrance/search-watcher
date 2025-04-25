@@ -1,5 +1,11 @@
 {
-  "ebay": [{"term": "ps5"}],
-  "gumtree": [{"term": "iphone"}],
-  "leboncoin": [{"term": "velo"}]
+  "ebay": [
+    {
+      "term": "toaster",
+      "category": "",
+      "filters": {}
+    }
+  ],
+  "gumtree": [],
+  "leboncoin": []
 }
